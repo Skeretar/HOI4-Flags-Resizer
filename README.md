@@ -14,3 +14,6 @@ To use the program properly, you'll have to:
 
 ## Contributing
 This program is still in Work in Progress, so it's reccomended to open issues incase you encounter problems or bugs.
+
+## Credits
+Idea given by HaLL#6587

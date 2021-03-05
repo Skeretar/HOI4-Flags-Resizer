@@ -13,4 +13,4 @@ To use the program properly, you'll have to:
 	3) Done
 
 ## Contributing
-If you have encountered any bugs, issues or problems with the program please open an issue and describe the problem.
+This program is still in Work in Progress, so it's reccomended to open issues incase you encounter problems or bugs.

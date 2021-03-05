@@ -6,12 +6,22 @@ from PIL import Image
 
 pwd = Path('.')
 images = pwd/"flags"
-output = pwd/"output"
 GoodImages = []
 
 print("==----------==")
-input("Welcome to HOI4 Flag Folder Generator. Press ENTER to continue.")
-print("==----------==")
+input("Welcome to HOI4 Flag Folder Generator. Press ENTER to continue.\n==----------==")
+
+hoi4 = input("Please insert your HOI4 mod directory.\n> ")
+conf = input("Are you sure it's that one? [Y/N]\n> ")
+while conf != "Y":
+    hoi4 = input("Please insert your HOI4 mod directory.\n> ")
+    conf = input("Are you sure it's that one? [Y/N]\n> ")
+
+output = Path(hoi4)
+if not((output/"small").exists() or (output/"medium").exists()):
+    print("Inserted folder not found or not recognized as a proper flag folder (It misses either small or medium folder)")
+    input("...")
+    exit()
 
 # all flags must be:
     # - .tga

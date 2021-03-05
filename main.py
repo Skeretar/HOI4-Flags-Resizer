@@ -10,7 +10,7 @@ output = pwd/"output"
 GoodImages = []
 
 print("==----------==")
-print("Welcome to HOI4 Flag Folder Generator. Press ENTER to continue.")
+input("Welcome to HOI4 Flag Folder Generator. Press ENTER to continue.")
 print("==----------==")
 
 # all flags must be:
@@ -24,8 +24,7 @@ print("==----------==")
     # IMAGE COLLECTION AND ERROR CHECKING  
 for image in images.iterdir():
     with Image.open(image) as I:
-        is_wrongtitle = 0
-
+        
         imagesize = I.size
         filetitle = I.filename.split("\\")[::-1][0]
 
@@ -53,7 +52,7 @@ for Im in GoodImages:
     I = Image.open(Im)
     # to save as TGA just do "I.save("title.TGA")
     
-    title = I.filename.split("\\")[::-1][0]+".tga"
+    title = (I.filename.split("\\")[::-1][0]).split(".")[0]+".tga"
     small = I.resize((10, 7), PIL.Image.BICUBIC)
     medium = I.resize((41, 26), PIL.Image.BICUBIC)
     big = I.resize((82, 52), PIL.Image.BICUBIC)
